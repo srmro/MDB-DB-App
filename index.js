@@ -1,7 +1,8 @@
 import express, { response } from "express";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-
+dotenv.config();
 const app = express();
 
 app.use(express.json());
@@ -9,7 +10,7 @@ app.use(express.json());
 
 const PORT = 3020;
 
-mongoose.connect('mongodb+srv://romero:loca4321@cualquier.ns93v.mongodb.net/Cualquier-Cosa?retryWrites=true&w=majority&appName=Cualquier')
+mongoose.connect(process.env.CUALQUIER_URL);
 try {
     console.log('Connected to Cualquier Cosa');
 } catch(error){
