@@ -1,4 +1,4 @@
-import mongoose, { model } from "mongoose";
+import mongoose from "mongoose";
 
 const guestSchema = new mongoose.Schema(
     {
@@ -26,11 +26,19 @@ const guestSchema = new mongoose.Schema(
             required: true
         }
 
-    });
+    },
 
-export const guest = new model("guest", guestSchema);
+    {
+        timestamps:true
+    }
 
 
+
+);
+
+const guest = mongoose.model("guest", guestSchema);
+
+export default guest
 
 
 

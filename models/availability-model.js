@@ -1,7 +1,6 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 const availabilitySchema = new mongoose.Schema({
-
 
     totalRooms: {
         type: Number,
@@ -28,7 +27,15 @@ const availabilitySchema = new mongoose.Schema({
         required: true,
         max:[12, "No more King Beds!"],
         min:[10, "Available King beds" ]
-    }
-});
+    },
+},
 
-export const availability = new model("availability", availabilitySchema)
+{
+    timestamps: true
+}
+
+);
+
+const availability = mongoose.model("availability", availabilitySchema)
+
+export default availability

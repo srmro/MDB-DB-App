@@ -1,4 +1,4 @@
-import mongoose, { model } from "mongoose";
+import mongoose from "mongoose";
 
 const serviceSchemas =  new mongoose.Schema({
 
@@ -30,7 +30,15 @@ const serviceSchemas =  new mongoose.Schema({
         maxLength: [120, "No more than 120 characters"]
     }
 
-})
+},
+
+{
+    timestamps:true
+}
+
+)
 
 
-export const service = new model("service", serviceSchemas);
+const service = mongoose.model("service", serviceSchemas);
+
+export default service
