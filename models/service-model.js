@@ -18,9 +18,10 @@ const ServiceSchema =  new mongoose.Schema({
         required: true,
         enum:[
             "Room Refresh",
-            "More Pillows", 
+            "More Materials", 
             "Maintenance", 
-            "Shuttle to Airport"
+            "Shuttle to Airport",
+            "Other"
         ]
     },
 

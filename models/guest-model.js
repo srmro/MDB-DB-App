@@ -10,7 +10,7 @@ const GuestSchema = new mongoose.Schema(
         memberId: {
             type: Number,
             required: false,
-            max: 12,
+            // max: 12,
             min:[5, "The member id should be 12 characters long"]
         },
         numberOfGuests: {

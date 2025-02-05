@@ -34,12 +34,11 @@ router.get("/service/:id", async (req, res) => {
 
 router.post("/service", async (req, res) => {
     try {
-
         const { body } = request
         const service = await Service.create(req.body);
         res.status(200).send(service)
     } catch {
-        res.status(500).send({ message: error.message });
+        res.status(500).send({ message:error.message});
     }
 });
 
