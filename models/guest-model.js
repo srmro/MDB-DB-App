@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const guestSchema = new mongoose.Schema(
+const GuestSchema = new mongoose.Schema(
     {
 
         name: {
@@ -36,9 +36,9 @@ const guestSchema = new mongoose.Schema(
 
 );
 
-const guest = mongoose.model("guest", guestSchema);
+const Guest = mongoose.model("Guest", GuestSchema);
 
-export default guest
+export default Guest
 
 
 

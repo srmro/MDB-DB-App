@@ -1,12 +1,17 @@
 import express, { response } from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import availability from "./routes/availability.js"
+import guest from "./routes/guest.js"
+import service from "./routes/service.js"
 
 dotenv.config();
 const app = express();
 
 app.use(express.json());
-
+app.use(availability);
+app.use(guest);
+app.use(service);
 
 const PORT = 3020;
 
