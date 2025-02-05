@@ -29,7 +29,6 @@ const availabilitySchema = new mongoose.Schema({
         max:[12, "No more King Beds!"],
         min:[10, "Available King beds" ]
     }
-
-
-
 });
+
+export const availability = new model("availability", availabilitySchema)
