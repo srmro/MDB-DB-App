@@ -1,5 +1,5 @@
 import express from 'express'
-import {Guest} from "../models/guest-model.js"
+import Guest from "../models/guest-model.js"
 import { Router } from 'express'
 
 const router = Router();

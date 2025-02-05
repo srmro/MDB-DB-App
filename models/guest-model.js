@@ -38,7 +38,7 @@ const GuestSchema = new mongoose.Schema(
 
 const Guest = mongoose.model("Guest", GuestSchema);
 
-export default Guest
+export default Guest;
 
 
 

@@ -12,21 +12,21 @@ const AvailabilitySchema = new mongoose.Schema({
         type: Number,
         required: true,
         max: [24,"We're booked for the night!"],
-        min: [23, "Available Rooms to Book!"]
+        // min: [18, "Available Rooms to Book!"]
     },
 
     twoDoubleBeds: {
         type: Number,
         required: true,
         max:[12, "No more double beds!"],
-        min:[11, "Available Double Beds!"]
+        // min:[11, "Available Double Beds!"]
     },
 
     oneKingBed: {
         type: Number,
         required: true,
         max:[12, "No more King Beds!"],
-        min:[11, "Available King beds" ]
+        // min:[11, "Available King beds" ]
     },
 },
 
